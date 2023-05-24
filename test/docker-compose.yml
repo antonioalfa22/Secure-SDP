@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+
+  # SDP Client that uses sdpClient.Dockerfile
+  sdp-client:
+    build:
+      context: .
+      dockerfile: sdpClient.Dockerfile
+    image: sdp-client
+    container_name: sdp-client
+    networks:
+      - sdp-network
+    
+
+networks:
+  sdp-network: {}
